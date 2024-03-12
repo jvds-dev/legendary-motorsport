@@ -44,8 +44,12 @@ function renderCars(cars){
         vehicleItem.classList.add('vehicle-item');
 
         const vehicleImg = document.createElement('img');
-        const imgSrcName = vehicle.vehicle.replace(/ /g, "_").toLowerCase();
-        vehicleImg.src = `../assets/cars/${imgSrcName}.webp`;
+        // const imgSrcName = vehicle.vehicle.replace(/ /g, "_").toLowerCase();
+        const file_name = vehicle.vehicle.toLowerCase().replace(/\s+/g, '_');
+        const url = `https://raw.githubusercontent.com/jvds-dev/legendary-motorsport/main/assets/cars/${file_name}.webp`
+        // vehicleImg.src = `../assets/cars/${imgSrcName}.webp`;
+        console.log(url);
+        vehicleImg.src = url;
 
         const infoContainer = document.createElement('div');
         infoContainer.classList.add('info');
