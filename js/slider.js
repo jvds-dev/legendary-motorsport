@@ -36,6 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         slideImg.style.backgroundImage = `url(${url})`
         slideImg.style.backgroundSize = 'cover';
         slideImg.style.backgroundPosition = 'center';
-        button.textContent = 'SEE DETAILS';
+        button.textContent = 'DETALHES';
     });
 });

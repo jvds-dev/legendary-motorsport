@@ -64,7 +64,7 @@ function renderCars(cars){
 
         const purchaseBtn = document.createElement('button');
         purchaseBtn.classList.add('purchase-btn');
-        purchaseBtn.textContent = "BUY NOW";
+        purchaseBtn.textContent = "COMPRAR";
 
         infoContainer.appendChild(vehicleName);
         infoContainer.appendChild(vehiclePrice);
