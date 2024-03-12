@@ -10,11 +10,11 @@ slides.forEach(slide => {
 })
 
 const featuredCars = [
-    { vehicle: "Pegassi Vacca", price: "$10,000" },
-    { vehicle: "Toundra Panthere", price: "$15,000" },
-    { vehicle: "Trufade Adder", price: "$20,000" },
-    { vehicle: "Classique Broadway", price: "$25,000" },
-    { vehicle: "Emperor Vectre", price: "$30,000" }
+    { vehicle: "Pegassi Vacca", price: "$240,000" },
+    { vehicle: "Toundra Panthere", price: "$2,170,000" },
+    { vehicle: "Trufade Adder", price: "$1,000,000" },
+    { vehicle: "Classique Broadway", price: "$925,000" },
+    { vehicle: "Emperor Vectre", price: "$1,785,000" }
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
         carPrice.textContent = car.price;
 
         const file_name = car.vehicle.toLowerCase().replace(/\s+/g, '_');
-        slideImg.style.backgroundImage = `url(../assets/cars/${file_name}.webp)`;
+        const url = `https://raw.githubusercontent.com/jvds-dev/legendary-motorsport/main/assets/cars/${file_name}.webp`
+
+        // slideImg.style.backgroundImage = `url(../assets/cars/${file_name}.webp)`;
+        slideImg.style.backgroundImage = `url(${url})`
         slideImg.style.backgroundSize = 'cover';
         slideImg.style.backgroundPosition = 'center';
         button.textContent = 'SEE DETAILS';

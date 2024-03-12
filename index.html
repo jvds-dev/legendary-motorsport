@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9b5dcfea76.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="first">
@@ -27,19 +28,19 @@
                 <img src="assets/logos/logo-w.png" class="logo" id="logo">
             </div>
             <nav>
-                <p>home</p>
-                <p>vehicles</p>
-                <p>about</p>
-                <p>contact</p>
+                <p>início</p>
+                <p>veículos</p>
+                <p>sobre</p>
+                <p>contato</p>
             </nav>
         </div>
     </header>
 
     <section id="slider">
-        <div class="title-container">
-            <h3 class="title">FEATURED</h3>
+        <div class="title-container appear">
+            <h3 class="title">DESTAQUES DA SEMANA</h3>
         </div>
-        <div class="slider-container">
+        <div class="slider-container appear">
             <div class="slider">
                 <div class="slide-img active">
                     <div class="slide-content">
@@ -80,21 +81,82 @@
         </div>
     </section>
     <section id="vehicles">
-        <div id="filters">
-            <label for="sort-order">SORT BY:</label>
-            <select id="sort-order">
-                <option value="asc">Price: Low to High</option>
-                <option value="desc">Price: High to Low</option>
-            </select>
-            <button id="apply-filters">Apply Filters</button>
-        </div>
-        <div class="vehicles-container">
-
+        <div class="container">
+            <h3 class="title">NOSSOS VEÍCULOS</h3>
+            <div id="filters">
+                <label for="sort-order">SORT BY:</label>
+                <select id="sort-order">
+                    <option value="asc">Price: Low to High</option>
+                    <option value="desc">Price: High to Low</option>
+                </select>
+                <button id="apply-filters">Apply Filters</button>
+            </div>
+            <div class="vehicles-container">
+    
+            </div>
         </div>
     </section>
     <section id="reviews">
         <div class="reviews-container">
-            
+            <h3>Nossos clientes satisfeitos</h3>
+            <div class="reviews">
+                <div class="review">
+                    <div class="top">
+                        <img src="assets/profile-pics/michael.jpeg">
+                            <div class="right">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            <p class="user-name">M. De Santa</p>
+                            </div>
+                    </div>
+                    <div class="bot">
+                        <p class="review-text">"Esses caras conseguiram encontrar o carro perfeito para mim enquanto eu tomava um café. Rápidos, eficientes e discretos, como se deve ser. Recomendo para quem quer qualidade sem precisar se sujar as mãos."</p>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="top">
+                        <img src="assets/profile-pics/franklin.jpeg">
+                            <div class="right">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            <p class="user-name">F. Clinton</p>
+                            </div>
+                    </div>
+                    <div class="bot">
+                        <p class="review-text">"Atendimento top e sem enrolação. Se precisar de um veículo de qualidade, é com eles mesmo."</p>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="top">
+                        <img src="assets/profile-pics/trevor.jpeg">
+                            <div class="right">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            <p class="user-name">T. Philips</p>
+                            </div>
+                    </div>
+                    <div class="bot">
+                        <p class="review-text">"Esses caras são como a minha família, se minha família fosse um bando de malucos obcecados por carros e com um apetite insaciável por caos e destruição. Me entregaram um veículo mais rápido do que eu conseguiria explodir um bando de palhaços com um lançador de granadas. Recomendo para quem tem um desejo incontrolável por adrenalina e não se importa em sair coberto de sangue e sujeira."</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

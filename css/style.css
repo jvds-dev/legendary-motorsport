@@ -135,9 +135,10 @@ header nav p{
 
 
 #slider{
-    padding-top: 64px;
+    padding-top: 120px;
     width: 100%;
-    background: linear-gradient(-45deg, #252525, #000000);
+    /* background: linear-gradient(180deg, #ed1c24, #fff); */
+    background: #ed1c24;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,19 +148,18 @@ header nav p{
 .title-container{
     /* background: red; */
     width: 100%;
-    padding-left: 64px;
-    max-width: 1300px;
+    /* padding-left: 64px; */
+    max-width: 1000px;
 }
 .title{
     color: #fff;
     font-size: 42px;
-
 }
 .slider-container{
     /* margin-top: 54px; */
     padding: 54px 0px;
-    /* background: red; */
-    max-width: 1300px;
+    /* background: green; */
+    max-width: 1000px;
     width: 100%;
     /* height: 100%; */
     display: flex;
@@ -169,7 +169,7 @@ header nav p{
 .slider{
     /* background: yellow; */
     height: 450px;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -257,11 +257,21 @@ header nav p{
     /* justify-content: center; */
     align-items: center;
     padding: 54px;
+    /* max-width: 1300px; */
+}
+#vehicles .container{
+    max-width: 1000px;
+}
+#vehicles .title{
+    color: red;
+    padding: 32px 0px;
+    /* background: red;     */
+    width: 100%;
 }
 #filters {
     background: linear-gradient(#151515, #000);
     border-radius: 0px;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     width: 100%;
     display: flex;
     justify-content: end;
@@ -311,7 +321,7 @@ header nav p{
 .vehicles-container {
     /* background: green; */
     margin-top: 22px;
-    max-width: 1000px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
@@ -357,4 +367,119 @@ header nav p{
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+}
+
+#reviews{
+    background: #ececec;
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding-bottom: 64px; 
+    user-select: none;
+}
+.reviews-container{
+    /* background: green; */
+    /* background: #ececec; */
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 22px;
+}
+.reviews-container h3{
+    /* background: red; */
+    font-size: 42px;
+    text-align: center;
+    padding: 64px;
+}
+.reviews{
+    display: flex;
+    /* background: red; */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 50%;
+    padding: 32px;
+    align-items: center;
+    /* justify-content: center; */
+    /* gap: 32px; */
+    height: 500px;
+    box-shadow: 2px 2px 10px #15151533;
+    border: 2px solid #ccc;
+    outline: 4px solid #fff;
+    transition: all .7s ease;
+}
+.review:hover{
+    border-color: #ed1c24;
+}
+.review .top{
+    display: flex;
+    /* gap: 220px; */
+    align-items: center;
+    /* background: red; */
+    width: 100%;
+}
+.top .right{
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* height: 100%; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    padding: 22px;
+    gap: 32px;
+}
+.right .stars{
+    color: #ed1c24;
+}
+.review .bot{
+    /* background: green; */
+    width: 100%;
+}
+.review img{
+    width: 100px;
+    /* border-radius: 50%; */
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    box-shadow: 4px 4px 0px #ed1c24,
+                -4px -4px 0px #151515;
+}
+.review .user-name{
+    /* color: red; */
+    font-size: 18px;
+    font-weight: 600;
+}
+.review .review-text{
+    text-align: justify;
+    hyphens: auto;
+    /* padding: 0px 64px; */
+}
+
+.appear{
+    animation: appear 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 20%;
+}
+.reveal{
+    animation: reveal 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
