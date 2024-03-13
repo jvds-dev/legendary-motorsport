@@ -64,6 +64,9 @@ function renderCars(cars){
 
         const purchaseBtn = document.createElement('button');
         purchaseBtn.classList.add('purchase-btn');
+        purchaseBtn.onclick = function() {
+            window.location.href = "error.html";
+        };
         purchaseBtn.textContent = "COMPRAR";
 
         infoContainer.appendChild(vehicleName);
