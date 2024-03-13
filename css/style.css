@@ -389,9 +389,12 @@ header nav p{
 }
 .reviews-container h3{
     /* background: red; */
+    color: #ed1c24;
     font-size: 42px;
-    text-align: center;
-    padding: 64px;
+    text-align: start;
+    padding: 22px 0px;
+    border-bottom: 4px solid #ccc;
+    margin: 64px 0px;
 }
 .reviews{
     display: flex;
@@ -482,4 +485,144 @@ header nav p{
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+#newsletter{
+    background: #ccc;
+    /* height: 500px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 64px;
+}
+#newsletter .container {
+    background: green;
+    height: 100%;
+    max-width: 1000px;
+}
+#newsletter .newsletter{
+    background: #fff;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    gap: 22px;
+    box-shadow: 2px 2px 20px #05050555;
+}
+.newsletter h2{
+    font-size: 120px;
+    color: #ed1c24;
+    /* background: red; */
+    padding: 0;
+    display: flex;
+}
+.newsletter h3{
+    font-size: 32px;
+    color: #151515;
+}
+.newsletter p{
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+}
+.newsletter form{
+    /* background: #efefef; */
+    /* background: red; */
+    /* border: none; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter form input{
+    width: 50%;
+    height: 32px;
+    border: 2px solid #ed1c24;
+    padding-left: 22px;
+    background: #efefef;
+    /* color: ; */
+}
+.newsletter form button{
+    width: 15%;
+    border: none;
+    background: #ed1c24;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section{
+    background: #151515;
+    padding: 64px;
+    list-style: none;
+    color: #999;
+    display: flex;
+    gap: 32px;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+}
+.first-section ul{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+
+}
+.contact ul a{
+    text-decoration: none;
+    color: #999;
+}
+
+footer .company{
+    background: #000;
+    color: #454545;
+    font-size: 10px;
+    height: 200px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    gap: 12px;
+    width: 100%;
+
+}
+.company p{
+    text-align: center;
+}
+.company p:last-child{
+    /* background: red; */
+    padding: 32px;
+}
+.partners-logos{
+    background: #000;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding-bottom: 64px;
+    width: 100%;
+}
+.partners-logos img{
+    height: 64px;
+    /* background: gray; */
 }
