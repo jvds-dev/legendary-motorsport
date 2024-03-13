@@ -88,12 +88,45 @@ header .header-container{
 header nav{
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 8px;
 }
 header nav p{
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+    cursor: pointer;
+    text-transform: uppercase;
+    user-select: none;
+    transition: all .3s ease;
+    /* background: green; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* padding: 20px; */
+    text-align: center;
+    padding: 0px 8px;
+    font-weight: 600;
+    position: relative;
+}
+header nav p::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: all .1s ease;
+}
+header nav p:hover::before{
+    width: 100%;
+}
+header nav p:hover{
+    /* color: #000; */
+    /* background: #fff; */
+    color: #ed1c24;
+    /* scale: 1.1; */
+    /* font-weight: bold; */
 }
 
 .fixed-header {

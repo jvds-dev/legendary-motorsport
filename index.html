@@ -28,10 +28,11 @@
                 <img src="assets/logos/logo-w.png" class="logo" id="logo">
             </div>
             <nav>
-                <p>início</p>
-                <p>veículos</p>
-                <p>sobre</p>
-                <p>contato</p>
+                <p onclick="scrollToElement('first')">início</p>
+                <p onclick="scrollToElement('slider')">destaques</p>
+                <p onclick="scrollToElement('vehicles')">veículos</p>
+                <p onclick="scrollToElement('partners')">parceiros</p>
+                <p onclick="scrollToElement('partners')">contato</p>
             </nav>
         </div>
     </header>
@@ -159,7 +160,6 @@
             </div>
         </div>
     </section>
-
     <section id="newsletter">
         <div class="container">
             <div class="newsletter">
@@ -176,7 +176,7 @@
 
     <footer>
         <div class="first-section">
-            <div class="partners">
+            <div class="partners" id="partners">
                 <h3>NOSSOS COLABORADORES</h3>
                 <ul>
                     <a>Los Santos Customs</a>
