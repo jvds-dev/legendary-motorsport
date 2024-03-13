@@ -1,23 +1,12 @@
-let slides = document.querySelectorAll('.slide-img');
-
-slides.forEach(slide => {
-    slide.addEventListener('click', () => {
-        if(!slide.classList.contains('active')){
-            slides.forEach(s => s.classList.remove('active'));
-            slide.classList.add('active');
-        }
-    })
-})
-
-const featuredCars = [
-    { vehicle: "Pegassi Vacca", price: "$240,000" },
-    { vehicle: "Toundra Panthere", price: "$2,170,000" },
-    { vehicle: "Trufade Adder", price: "$1,000,000" },
-    { vehicle: "Classique Broadway", price: "$925,000" },
-    { vehicle: "Emperor Vectre", price: "$1,785,000" }
-];
-
 document.addEventListener("DOMContentLoaded", function() {
+    const featuredCars = [
+        { vehicle: "Pegassi Vacca", price: "$240,000" },
+        { vehicle: "Toundra Panthere", price: "$2,170,000" },
+        { vehicle: "Trufade Adder", price: "$1,000,000" },
+        { vehicle: "Classique Broadway", price: "$925,000" },
+        { vehicle: "Emperor Vectre", price: "$1,785,000" }
+    ];
+
     const sliderContainer = document.querySelector('.slider');
 
     featuredCars.forEach((car, index) => {
@@ -39,3 +28,50 @@ document.addEventListener("DOMContentLoaded", function() {
         button.textContent = 'DETALHES';
     });
 });
+
+let slides = document.querySelectorAll('.slide-img');
+let index = 0;
+let playing = true;
+
+function updateActiveSlide(clickedIndex) {
+    slides.forEach((slide, i) => {
+        if (i === clickedIndex) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
+}
+
+slides.forEach((slide, i) => {
+    slide.addEventListener('click', () => {
+        if (!slide.classList.contains('active')) {
+            updateActiveSlide(i);
+            index = i;
+            playing = false;
+        }
+    });
+});
+
+function autoPlay() {
+    if (playing) {
+        if (index < slides.length - 1) {
+            index++;
+        } else {
+            index = 0;
+        }
+        updateActiveSlide(index);
+    }
+}
+
+const container = document.getElementById('slider-container');
+
+container.addEventListener('mouseenter', () => {
+    playing = false;
+});
+
+container.addEventListener('mouseleave', () => {
+    playing = true;
+});
+
+setInterval(autoPlay, 8000);
