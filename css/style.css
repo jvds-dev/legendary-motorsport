@@ -216,6 +216,7 @@ header nav p:hover{
     transition: all .5s ease;
     cursor: pointer;
     border-radius: 12px;
+    overflow: hidden;
 }
 .slide-img:hover{
     /* border: 2px solid red; */
@@ -246,6 +247,7 @@ header nav p:hover{
     background: linear-gradient(transparent, #151515ff);
     opacity: 0;
     pointer-events: none;
+    /* border-radius: 12px; */
     transition: all 1s ease;
 }
 .slide-img.active .slide-content{
